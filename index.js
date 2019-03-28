@@ -1,4 +1,53 @@
-document.addEventListener("DOMContentloaded", (e) => {
+//document.addEventListener("DOMContentLoaded", (e) => {
   // invoking a function here will make sure it happens on page load
   // your code here
-});
+  
+  
+  const titanicButton = document.getElementById('Titanic')
+  const terminatorButton = document.getElementById('Terminator 2')
+  
+  
+  function onTitanic(){
+    let data = movies.Titanic
+    let title = data.title
+    let titleDiv = document.getElementById('title')
+    titleDiv.innerHTML = title
+    let directorDiv = document.getElementById('director')
+    directorDiv.innerHTML = data.director
+    let genreDiv = document.getElementById('genre')
+    genreDiv.innerHTML = data.genre
+    let filmRatingDiv = document.getElementById('filmRating')
+    filmRatingDiv.innerHTML = data.filmRating
+    let posterImg = document.getElementById('poster')
+    posterImg.src = data.poster
+    let audienceScoreDiv = document.getElementById('audienceScore')
+    audienceScoreDiv.innerHTML = data.audienceScore
+    let descriptionDiv = document.getElementById('description')
+  descriptionDiv.innerHTML = data.description
+  
+  let castDiv = document.getElementById('cast')
+  let startingString = ""
+  for (let castMember of data.cast) {
+    startingString += "<li>" + castMember.role + ":" + castMember.actor + "</li>"
+  }
+  console.log(startingString)
+  castDiv.innerHTML = startingString 
+  
+  /*const reviewsDiv = document.getElementById('reviews')
+  startingString = ""
+  for (let review of data.reviews) {
+    startingString += "<li>" + review.username + ":" + review.content + "</li>"
+    
+  }
+  review.innerHTML = startingString
+*/
+}
+  
+  titanicButton.addEventListener('click', onTitanic)
+  terminatorButton.addEventListener('click', () => console.log('yo'))
+  
+  
+  
+  
+//});
+
