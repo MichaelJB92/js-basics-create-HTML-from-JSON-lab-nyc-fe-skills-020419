@@ -33,14 +33,14 @@
   console.log(startingString)
   castDiv.innerHTML = startingString 
   
-  /*const reviewsDiv = document.getElementById('reviews')
+  const reviewsDiv = document.getElementById('reviews')
   startingString = ""
   for (let review of data.reviews) {
     startingString += "<li>" + review.username + ":" + review.content + "</li>"
     
   }
   review.innerHTML = startingString
-*/
+
 }
   
   titanicButton.addEventListener('click', onTitanic)
